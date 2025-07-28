@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metalife</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>テスト送信です佐藤</h1>
+    </header>
+    <main>
+        <div class="circle-container">
+            <div class="item" style="--deg: 0deg;"></div>
+            <div class="item" style="--deg: 60deg;"></div>
+            <div class="item" style="--deg: 120deg;"></div>
+            <div class="item" style="--deg: 180deg;"></div>
+            <div class="item" style="--deg: 240deg;"></div>
+            <div class="item" style="--deg: 300deg;"></div>
+        </div>
+
+    </main>
+
+
+        <section class="question" id="question">
+        <!-- <h2 class="sec-title">FAQ</h2> -->
+        <div class="faq">
+            <div class="faq-item">
+                <h2 class="sec-title">よくある質問</h2>
+                <dl>
+                    <dt><span class="wobble-text">Q1</span>: Metalifeとは何ですか？</dt>
+                    <dd><span class="wobble-text">A1</span>: Metalifeは、です。</dd>
+                    <dt><span class="wobble-text">Q2</span>: どのような機能がありますか？</dt>
+                    <dd><span class="wobble-text">A2</span>: イベントの告知、フォーラムでのディスカッションができます。</dd>
+                    <dt><span class="wobble-text">Q3</span>: 登録は無料ですか？</dt>
+                    <dd><span class="wobble-text">A3</span>: はい、Metalifeへの登録は無料です。</dd>
+                    <dt><span class="wobble-text">Q4</span>: どのように参加できますか？</dt>
+                    <dd><span class="wobble-text">A4</span>: アカウントを作成してください。</dd>
+                    <dt><span class="wobble-text">Q5</span>: サポートはどのように受けられますか？</dt>
+                    <dd><span class="wobble-text">A5</span>: サポートはお問い合わせフォームからご連絡ください。</dd>
+                </dl>
+            </div>
+        </div><!-- /.faq -->
+    </section>
+
+    <section class="contact">
+        <h2 class="sec-title">お問い合わせ</h2>
+        <p>ご質問やご意見がある場合は、以下のフォームからお問い合わせください。</p>
+        <form action="submit_form.php" method="post">
+            <label for="name">お名前:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">メールアドレス:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">メッセージ:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">送信</button>
+        </form>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Metalife. All rights reserved.</p>
+    </footer>
+<!-- jQuery読み込み -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- 外部JSファイル -->
+<script src="../js/main.js"></script>
+</body>
+
+</html>
