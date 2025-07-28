@@ -1,0 +1,238 @@
+/* .wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+} */
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+/* about */
+.about {
+  text-align: center;
+}
+
+.circle-container {
+  position: relative;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.circle-container h1 {
+  text-align: center;
+}
+
+.circle-container ul {
+  width: 100%;
+}
+
+
+.circle-container li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  /* 画像の幅と同じに設定 */
+  height: 250px;
+  /* 画像の高さと同じに設定 */
+  margin-left: -100px;
+  /* 自身の幅の半分を戻して中央揃え */
+  margin-top: -100px;
+  /* 自身の高さの半分を戻して中央揃え */
+  /* アニメーション時間: 停止3秒 + 回転0.5秒 = 3.5秒/ステップ
+     5枚の画像なので、合計時間 = 3.5秒 * 5 = 17.5秒 */
+  animation: liRotate 17.5s linear infinite;
+  /* li要素自体を回転させる */
+  z-index: -1;
+}
+
+/* 各li要素の初期位置（アニメーションの開始オフセット）を設定 */
+.circle-container li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.circle-container li:nth-child(2) {
+  animation-delay: -3.5s;
+  /* 1ステップ分先行 */
+}
+
+.circle-container li:nth-child(3) {
+  animation-delay: -7s;
+  /* 2ステップ分先行 */
+}
+
+.circle-container li:nth-child(4) {
+  animation-delay: -10.5s;
+  /* 3ステップ分先行 */
+}
+
+.circle-container li:nth-child(5) {
+  animation-delay: -14s;
+  /* 4ステップ分先行 */
+}
+
+.circle-container li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+
+}
+
+
+/* li要素（画像のコンテナ）を円周上で回転させるアニメーション */
+@keyframes liRotate {
+  /* 各ステップは 17.5秒 / 5 = 3.5秒 */
+  /* 回転角度は 360度 / 5枚 = 72度 ごと */
+  /* translateY(-120px) は、liの中心から上に120pxずらして円運動させるための距離 (円の半径) */
+
+  /* 最初の停止と初期位置（0度） */
+  0% {
+    transform: rotate(0deg) translateY(-300px);
+  }
+
+  /* 3秒停止 (0%から17.14%まで) */
+  17.14% {
+    /* (3秒 / 17.5秒) * 100% = 約17.14% */
+    transform: rotate(0deg) translateY(-300px);
+  }
+
+  /* 0.5秒で72度回転 (17.14%から20%まで) */
+  20% {
+    /* (3.5秒 / 17.5秒) * 100% = 20% */
+    transform: rotate(72deg) translateY(-300px);
+  }
+
+  /* 2番目の停止と位置（72度） */
+  37.14% {
+    /* (3秒 + 3.5秒) / 17.5秒 * 100% = 約37.14% */
+    transform: rotate(72deg) translateY(-300px);
+  }
+
+  /* 0.5秒で144度回転 */
+  40% {
+    /* (3.5秒 * 2) / 17.5秒 * 100% = 40% */
+    transform: rotate(144deg) translateY(-300px);
+  }
+
+  /* 3番目の停止と位置（144度） */
+  57.14% {
+    /* (3秒 + 3.5秒 * 2) / 17.5秒 * 100% = 約57.14% */
+    transform: rotate(144deg) translateY(-300px);
+  }
+
+  /* 0.5秒で216度回転 */
+  60% {
+    /* (3.5秒 * 3) / 17.5秒 * 100% = 60% */
+    transform: rotate(216deg) translateY(-300px);
+  }
+
+  /* 4番目の停止と位置（216度） */
+  77.14% {
+    /* (3秒 + 3.5秒 * 3) / 17.5秒 * 100% = 約77.14% */
+    transform: rotate(216deg) translateY(-300px);
+  }
+
+  /* 0.5秒で288度回転 */
+  80% {
+    /* (3.5秒 * 4) / 17.5秒 * 100% = 80% */
+    transform: rotate(288deg) translateY(-300px);
+  }
+
+  /* 5番目の停止と位置（288度） */
+  97.14% {
+    /* (3秒 + 3.5秒 * 4) / 17.5秒 * 100% = 約97.14% */
+    transform: rotate(288deg) translateY(-300px);
+  }
+
+  /* 0.5秒で360度回転（一周完了） */
+  100% {
+    transform: rotate(360deg) translateY(-300px);
+  }
+}
+
+
+/* ivent-content */
+.content-detail {
+  background-color: rgb(123, 230, 123);
+  padding-block: 80px;
+}
+
+.left-content {
+  width: 50%;
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0;
+}
+
+
+.right-content {
+  width: 50%;
+  background-color: white;
+  padding: 5%;
+  margin-left: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.left-content img,
+.right-content img {
+  height: 100%;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.about-txt p:first-of-type {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.animation-left-reason {
+  animation: moveRight 1s 1 forwards linear;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animation-right-reason {
+  animation: moveLeft 1s 1 forwards linear;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(+50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+}
+
+/* room */
