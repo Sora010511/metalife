@@ -6,33 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metalife</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="photos/favicon.png">
 </head>
 
 <body>
-    <header>
-          <nav>
-            <div class="logo">
-                <a href="#home">
+    <header id="header">
+        <h1 class="site-title">
+            <a href="#home">
                 <img src="photos/metaleaf_logo.png" alt="メタリーフロゴ">
-                </a>
-            </div>
-            <ul>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">NEWS</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">CONTACT</a></li>
+            </a>
+        </h1>
+        <!-- グローバルナビゲーション -->
+        <nav id="navi">
+            <ul class="menu">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#voice">VOICE</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-
-        <div class="header-text">
-            <h1>つながる 広がる 見つかる<br>あなたのメタ空間</h1>
-        </div>
-        <div class="btn">
-            <p>交流会をのぞいてみる</p>
-            <!-- <p>Take a look</p> -->
-        </div>
     </header>
-   <main>
+
+    <main>
+        <!-- mainvisualここから -->
+        <div id="mainvisual">
+            <img src="photos/mainvisual-5.png" alt="メインビジュアル">
+
+            <div class="key-text">
+                <p class="key-title">つながる 広がる 見つかる<br>あなたのメタ空間</p>
+                <a class="btn" href="#about">交流会をのぞいてみる</a>
+            </div>
+        </div>
+        <!-- mainvisualここまで -->
+
         <section class="about">
             <div class="circle-container">
                 <h1>About<br>～Meta&nbsp;leafについて～</h1>
@@ -102,7 +108,7 @@
     </main>
 
 
-        <section class="question" id="question">
+    <section class="question" id="question">
         <!-- <h2 class="sec-title">FAQ</h2> -->
         <div class="faq">
             <div class="faq-item">
@@ -139,15 +145,15 @@
             <button type="submit">送信</button>
         </form>
     </section>
-    
+
     <footer>
         <p>&copy; 2023 Metalife. All rights reserved.</p>
     </footer>
-<!-- jQuery読み込み -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- 外部JSファイル -->
-<script src="../js/main.js"></script>
+    <!-- 外部JSファイル -->
+    <script src="../js/main.js"></script>
 </body>
 
 </html>
