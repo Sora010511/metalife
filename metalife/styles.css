@@ -13,12 +13,10 @@ li {
   list-style: none;
 }
 
-/* header */
 body {
-    background-image: url(photos/hackthon_mainvisual.png);
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-style: normal;
+    background-image: url(photos/hackthon_background-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 img {
@@ -27,33 +25,66 @@ img {
     object-fit: cover;
 }
 
-.logo img{
+/* header */
+#header {
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background-color:rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  position :fixed;
+  top :0;
+  z-index: 10;
+}
+h1 {
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
+  height: 100%;
+  margin-block: 0;
+  margin-left: 30px;
+}
+h1 img{
     height: 100%;
-    margin-left: 30px;
 }
 nav {
-    background-color: white;
-    opacity: 80%;
-    height: 80px;
     display: flex;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    justify-content: flex-end;
+    width: 100%;
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
 }
 nav ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 100%;
+    width: 50%;
 }
 nav li {
-    margin: 5%;
+    margin-inline: 3%;
     list-style-type: none;
     text-decoration: none;
 }
 nav a {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     text-decoration: none;
+    color: #20588a;
 }
-
+/* mainvisual */
+#mainvisual img {
+  height: 100vh;
+  padding-bottom: 80px;
+}
+#mainvisual .key-text .key-title{
+  font-size: 2.875em;
+  font-weight: bold;
+  color: #20588a;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 6px #fff;
+}
+.key-text {
+  position: absolute;
+  top: 280px;
+  left: 10%;
+  z-index: 10;
+}
 
 
 /* about */
@@ -206,7 +237,7 @@ nav a {
 
 /* ivent-content */
 .content-detail {
-  background-color: rgb(123, 230, 123);
+  background-color: rgb(123, 230, 123 ,0.9);
   padding-block: 80px;
 }
 
