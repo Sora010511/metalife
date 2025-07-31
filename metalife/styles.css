@@ -1,73 +1,89 @@
-/* .wrapper {
+.wrapper {
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
-} */
-
-img {
-  width: 100%;
-  object-fit: cover;
 }
+
 
 li {
   list-style: none;
 }
 
 body {
-    background-image: url(photos/hackthon_background-image.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(photos/hackthon_background-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  font-family: "Kosugi Maru", sans-serif;
 }
 
 img {
-    max-width: 100%;
-    vertical-align: bottom;
-    object-fit: cover;
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
 }
+
+section {
+  margin-top: 80px;
+}
+
+
 
 /* header */
 #header {
   display: flex;
-  height: 80px;
+  height: 70px;
   width: 100%;
-  background-color:rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-  position :fixed;
-  top :0;
+  position: fixed;
+  top: 0;
   z-index: 10;
 }
-h1 {
+
+#header h1 {
   /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
+  width: 30%;
   height: 100%;
   margin-block: 0;
   margin-left: 30px;
 }
-h1 img{
-    height: 100%;
+
+.logo {
+  width: 100px;
 }
+
+h1 img {
+  height: 100%;
+}
+
 nav {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5); */
 }
+
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
 }
+
 nav li {
-    /* margin-inline: 5%; */
-    padding-inline: 5%;
-    list-style-type: none;
-    text-decoration: none;
+  /* margin-inline: 5%; */
+  padding-inline: 5%;
+  list-style-type: none;
+  text-decoration: none;
 }
+
 nav a {
-    font-size: 1.3rem;
-    text-decoration: none;
-    color: #20588a;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #20588a;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -75,47 +91,52 @@ nav a:hover {
 /* mainvisual */
 #mainvisual img {
   height: 100vh;
-  padding-bottom: 100px;
 }
-#mainvisual .key-text .key-title{
+
+#mainvisual .key-text .key-title {
   font-size: 2.875rem;
   font-weight: bold;
   color: #20588a;
   margin-bottom: 30px;
   text-shadow: 0 4px 6px #a3ca5b;
 
-  }
+}
+
 .key-text {
   position: absolute;
   top: 240px;
   left: 8%;
   z-index: 2;
 }
+
 .key-btn a {
   text-decoration: none;
 }
+
 .btn {
   font-size: 2.4rem;
   font-weight: bold;
-  padding:8px 24px;
-  
-  display:inline-block;
+  padding: 8px 24px;
+
+  display: inline-block;
   border-radius: 50px;
-  margin-block:20px;
+  margin-block: 20px;
   transition: all 0.1s;
   background-color: #30cfd0;
-  box-shadow :0 7px #fee140;
+  box-shadow: 0 7px #fee140;
   border: 1px solid #a3ca5b;
   color: #fefefe;
 }
+
 .btn:hover {
   opacity: 0.8;
   color: #fefefe;
   background-color: #fee140;
-  box-shadow :0 6px #30cfd0;
+  box-shadow: 0 6px #30cfd0;
   border: 1px solid #a3ca5b;
   text-shadow: 1px 1px 0 #000;
 }
+
 .btn:active {
   position: relative;
   top: 6px;
@@ -126,13 +147,20 @@ nav a:hover {
 
 
 /* about */
-.about {
+#about {
   text-align: center;
+}
+
+#about h2,
+#voice h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 
 .circle-container {
   position: relative;
-  margin-top: 300px;
+  margin-top: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,14 +168,9 @@ nav a:hover {
   height: auto;
 }
 
-.circle-container h1 {
-  text-align: center;
-}
-
 .circle-container ul {
   width: 100%;
 }
-
 
 .circle-container li {
   position: absolute;
@@ -157,9 +180,9 @@ nav a:hover {
   /* 画像の幅と同じに設定 */
   height: 250px;
   /* 画像の高さと同じに設定 */
-  margin-left: -100px;
+  margin-left: -125px;
   /* 自身の幅の半分を戻して中央揃え */
-  margin-top: -100px;
+  margin-top: -125px;
   /* 自身の高さの半分を戻して中央揃え */
   /* アニメーション時間: 停止3秒 + 回転0.5秒 = 3.5秒/ステップ
      5枚の画像なので、合計時間 = 3.5秒 * 5 = 17.5秒 */
@@ -275,8 +298,12 @@ nav a:hover {
 
 /* ivent-content */
 .content-detail {
-  background-color: rgb(123, 230, 123);
+  background-color: rgb(203, 242, 130, 0.8);
   padding-block: 80px;
+}
+
+.content-detail:last-of-type {
+  padding-top: 40px;
 }
 
 .left-content {
@@ -310,10 +337,15 @@ nav a:hover {
 
 .about-txt p:first-of-type {
   color: red;
+  margin-block: 10px;
+  font-size: 1.25rem;
+}
+
+.about-txt p:nth-of-type(2) {
   margin-bottom: 10px;
 }
 
-.animation-left-reason {
+.animation-left {
   animation: moveRight 1s 1 forwards linear;
 }
 
@@ -329,7 +361,7 @@ nav a:hover {
   }
 }
 
-.animation-right-reason {
+.animation-right {
   animation: moveLeft 1s 1 forwards linear;
 }
 
@@ -341,9 +373,87 @@ nav a:hover {
 
   100% {
     transform: translateX(0);
-    opacity: 0.5;
+    opacity: 1;
   }
 }
+
+/* voice */
+#voice {
+  margin-bottom: 30px;
+}
+
+.voice-content {
+  animation: expandIn 3s 1 forwards ease-out;
+  opacity: 1;
+}
+
+@keyframes expandIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.left-voice {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.right-voice {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.icon {
+  text-align: center;
+  width: 10%;
+}
+
+.icon img {
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.voice-txt {
+  position: relative;
+  background-color: rgb(218, 234, 240);
+  width: 60%;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 30px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  }
+
+.voice-txt:first-of-type::before,
+.voice-txt:last-of-type::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  right: 100%;
+  border: 15px solid transparent;
+  border-right: 15px solid rgb(218, 234, 240);
+}
+
+.voice-txt:nth-of-type(1)::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 100%;
+  border: 15px solid transparent;
+  border-left: 15px solid rgb(218, 234, 240);
+}
+
 
 /* キャラクター */
 .follower {
@@ -361,7 +471,7 @@ nav a:hover {
 
 
 /* FAQ */
-.faq {
+#faq {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
@@ -378,6 +488,7 @@ nav a:hover {
   border-radius: 10px;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
+
 .faq-item h2 {
   text-align: center;
   font-size: 24px;
@@ -387,20 +498,24 @@ nav a:hover {
 .faq-item.active h2 {
   color: #0056b3;
 }
+
 .faq-item h2:hover {
   color: #0056b3;
 }
+
 .faq-item dd {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .faq-item.active h2::after {
   content: " ▲";
 }
+
 .wobble-text {
   display: inline-block;
-font-size:24px;
+  font-size: 24px;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -412,21 +527,26 @@ font-size:24px;
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(3deg);
   }
+
   50% {
     transform: rotate(-3deg);
   }
+
   75% {
     transform: rotate(2deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
 }
+
 /* アコーディオン */
-.faq dd {
+#faq dd {
   display: none;
   margin: 0 0 1em;
   padding-left: 1em;
@@ -435,23 +555,30 @@ font-size:24px;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
-.faq dt {
+#faq dt {
   cursor: pointer;
   margin-top: 1em;
   transition: background-color 0.3s ease;
 }
+
 .faq-ttl {
   position: relative;
   cursor: pointer;
-  padding-right: 24px; /* ＋のための余白 */
+  padding-right: 24px;
+  /* ＋のための余白 */
 }
 
 /* ホバー効果 */
-.faq dt:hover {
+#faq dt:hover {
   background-color: #e0e0e0;
 }
 
@@ -462,7 +589,8 @@ font-size:24px;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 8px; /* 右端に配置 */
+  right: 8px;
+  /* 右端に配置 */
   width: 12px;
   height: 1px;
   margin: auto;
@@ -481,55 +609,57 @@ font-size:24px;
 
 
 /* セクション全体のスタイル */
-.contact {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-    /* border: 5px solid #348486; ネオン風の枠 */
-    /* box-shadow: 0 0 15px #00ff00; 光るような効果 */
+#contact {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  /* background-color: white; */
+  /* border: 5px solid #348486; ネオン風の枠 */
+  /* box-shadow: 0 0 15px #00ff00; 光るような効果 */
 }
 
 /* タイトルのスタイル */
 .sec-title {
-    font-size: 24px;
-    /* color: #0ea30e; */
-    margin-bottom: 20px;
+  font-size: 24px;
+  /* color: #0ea30e; */
+  margin-bottom: 20px;
 }
 
 /* フォーム内のラベル */
 label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
 /* 入力フィールド */
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    color: #ffffff;
-    font-size: 14px;
-    border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
 }
 
 /* ボタン */
 button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: transform 0.2s;
-    border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+  border-radius: 10px;
 }
 
 button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px #00ff00; /* ホバー時の光効果 */
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ff00;
+  /* ホバー時の光効果 */
 }
 
 
@@ -540,24 +670,35 @@ footer {
   padding: 20px;
   border-top: 1px solid #ccc;
   margin-top: 20px;
-} 
+}
+
 .footer-logo {
   display: inline-block;
-  width: 100px; /* ロゴの幅 */
-  height: 100px; /* ロゴの高さ */
+  width: 100px;
+  /* ロゴの幅 */
+  height: 100px;
+  /* ロゴの高さ */
   margin-bottom: 20px;
 }
-.sns{
+
+footer p {
+  padding-block: 5px;
+}
+
+.sns {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.sns img{
+
+.sns img {
   width: 44px;
   height: 44px;
   transition: transform 0.2s;
 }
+
 .sns img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px #00ff00; /* ホバー時の光効果 */
+  box-shadow: 0 0 10px #00ff00;
+  /* ホバー時の光効果 */
 }
