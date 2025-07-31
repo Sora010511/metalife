@@ -1,5 +1,6 @@
-// 
+// about
 $(function () {
+
   $(window).scroll(function () {
     $(".left-content").each(function () {
 
@@ -11,7 +12,7 @@ $(function () {
 
       if (scroll > target - windowHeight + $(this).outerHeight()) {
         // outerHeight()はpaddingを含めた高さを取得する
-        $(this).addClass("animation-left-reason");
+        $(this).addClass("animation-left");
       }
     });
   
@@ -25,10 +26,37 @@ $(function () {
 
       if (scroll > target - windowHeight + $(this).outerHeight()) {
         // outerHeight()はpaddingを含めた高さを取得する
-        $(this).addClass("animation-right-reason");
+        $(this).addClass("animation-right");
       }
     });
-  
+
+  //voice
+    $(".left-voice").each(function () {
+
+      var scroll = $(window).scrollTop();
+
+      var target = $(this).offset().top;
+
+      var windowHeight = $(window).height();
+
+      if (scroll > target - windowHeight + $(this).outerHeight()) {
+        // outerHeight()はpaddingを含めた高さを取得する
+        $(this).addClass("voice-content");
+      }
+    });
+    $(".right-voice").each(function () {
+
+      var scroll = $(window).scrollTop();
+
+      var target = $(this).offset().top;
+
+      var windowHeight = $(window).height();
+
+      if (scroll > target - windowHeight + $(this).outerHeight()) {
+        // outerHeight()はpaddingを含めた高さを取得する
+        $(this).addClass("voice-content");
+      }
+    });
   });
 });
 
@@ -64,25 +92,25 @@ animate();
 
 // アコーディオン
 $(function() {
-  $(".faq dt").on("click", function () {
+  $("#faq dt").on("click", function () {
     // 対応する答えだけ開閉
     $(this).next("dd").slideToggle(300);
     
     // 他の答えを閉じる（任意）
-    $(".faq dd").not($(this).next()).slideUp(300);
+    $("#faq dd").not($(this).next()).slideUp(300);
   });
 });
 
 // アコーディオンのタイトルに「+」を追加
 $(function() {
-  $(".faq dt").each(function() {
+  $("#faq dt").each(function() {
     $(this).append('<span class="toggle-icon">+</span>');
   });
 
   // タイトルクリック時の処理
-  $(".faq dt").on("click", function() {
+  $("#faq dt").on("click", function() {
     $(this).toggleClass("is-active");
-    $(this).find(".toggle-icon").text($(this).hasClass("is-active") ? "−" : "+");
+    $(this).find(".toggle-icon").text($(this).hasClass("is-active") ? "-" : "+");
   });
 });
 
