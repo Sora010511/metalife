@@ -9,15 +9,43 @@
 </head>
 
 <body>
-    <header>
-        <h1>テスト送信です佐藤</h1>
+<header id="header">
+        <h1 class="site-title">
+            <a href="#home">
+                <img src="photos/metaleaf_logo.png" alt="メタリーフロゴ">
+            </a>
+        </h1>
+        <!-- グローバルナビゲーション -->
+        <nav id="navi">
+            <ul class="menu">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#voice">VOICE</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
     </header>
-<main>
-        <section class="about">
+
+    <main>
+        <!-- mainvisualここから -->
+        <div id="mainvisual">
+            <img src="/metalife/photos/mainvisual-6.png" alt="メインビジュアル">
+
+            <div class="key-text">
+                <p class="key-title">つながる 広がる 見つかる<br>あなたのメタ空間</p>
+                <div class="key-btn">
+                    <!-- <span class="fa-regular fa-leaf"></span> -->
+                    <!-- <sp><i class="fa-jelly fa-regular fa-leaf"></i></sp -->
+                        <a class="btn" href="#about">交流会をのぞいてみる</a>
+                </div>
+            </div>
+        </div>
+        <!-- mainvisualここまで -->
+<section class="about">
             <div class="circle-container">
                 <h1>About<br>～Meta&nbsp;leafについて～</h1>
                 <ul>
-                    <li> <img src="/photos/letter_logo.png" class="photo"></li>
+                    <li> <img src="photos\letter_logo.png" class="photo"></li>
                     <li> <img src="photos\image_16.png" class="photo"></li>
                     <li> <img src="photos\image_29.png" class="photo"></li>
                     <li> <img src="photos\image_36.png" class="photo"></li>
@@ -32,7 +60,9 @@
                         <div class="about-txt">
                             <p>セミナー</p>
                             <p>毎週月曜日21:00スタート</p>
-                            <p>プログラミングだけではない！時間の使い方・考え方・転職活動等いろいろ学べる</p>
+                            <p> 日々の出来事や課題にどう向き合うかで、人生は大きく変わります。ピンチをチャンスに変える、ブレない思考の軸を育むためのフレームワークを習得。
+                                目標達成を加速させるセルフイメージの作り方、逆境を乗り越える心の強さを育む方法など、普段聞くことのできないことを学べます。
+                            </p>
                         </div>
                     </div>
                     <div class="right-content">
@@ -40,14 +70,21 @@
                         <div class="about-txt">
                             <p>オンライン飲み会</p>
                             <p>毎月1回不定期</p>
-                            <p>横のつながりの拡大!!特に初心者は参加必須!!</p>
+                            <p>【横のつながりを拡大】予測不能な「一期一会」の出会い
+                                住む場所も職業も違う、見ず知らずの人たちとの交流。共通の話題で盛り上がるもよし、全く新しい視点に気づくもよし。普段の生活では得られない、多様な価値観に触れることで、あなたの人間関係の幅が格段に広がります。
+                            </p>
                         </div>
                     </div>
                     <div class="left-content">
                         <img src="photos\biginner.png">
                         <div class="about-txt">
                             <p>初心者講習会</p>
-                            <p>特に初心者は参加必須!!宮口大先生になんでも質問OK</p>
+                            <p>【質問しづらいことでも大歓迎】「聞く専門」の講師が、あなたの疑問を徹底解消
+                                「こんな質問しても大丈夫かな？」とためらう必要は一切ありません。当講習会の講師は、参加者の疑問を一つ残らず解消することを使命としています。どんなに些細なことでも、遠慮なくご質問ください。あなたの「なぜ？」に、とことん向き合います。
+
+                                【初歩的な質問でも大歓迎】「分からなくて当たり前」だからこそ、納得いくまで学べる
+                                「知りたい！」という気持ちがあれば、それが一番大切です。私たちは、あなたが「分からなくて当たり前」という前提でサポートします。何度でも、どんなに初歩的なことでも、あなたが完全に納得するまで、私たちが隣で伴走します。
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -81,28 +118,32 @@
         </section>
     </main>
 
-
+<!-- キャラクター -->
+    <div class="follower">
+        <img src="/metalife/photos/ezgif.com-animated-gif-maker.gif" alt="追従キャラ" />
+    </div>
         <section class="question" id="question">
         <!-- <h2 class="sec-title">FAQ</h2> -->
         <div class="faq">
             <div class="faq-item">
                 <h2 class="sec-title">よくある質問</h2>
                 <dl>
-                    <dt><span class="wobble-text">Q1</span>: Metalifeとは何ですか？</dt>
-                    <dd><span class="wobble-text">A1</span>: Metalifeは、です。</dd>
-                    <dt><span class="wobble-text">Q2</span>: どのような機能がありますか？</dt>
+                    <dt class="faq-ttl"><span class="wobble-text">Q1</span>: Metalifeとは何ですか？</dt>
+                    <dd><span class="wobble-text">A1</span>: Metalifeは、MetaLifeは、バーチャルオフィス・イベントスペース・教育空間など、さまざまな目的で利用できるコミュニケーションツールです。雑談から本格的な会議、オンライン授業や説明会まで幅広く対応しています。</dd>
+                    <dt class="faq-ttl"><span class="wobble-text">Q2</span>: どのような機能がありますか？</dt>
                     <dd><span class="wobble-text">A2</span>: イベントの告知、フォーラムでのディスカッションができます。</dd>
-                    <dt><span class="wobble-text">Q3</span>: 登録は無料ですか？</dt>
-                    <dd><span class="wobble-text">A3</span>: はい、Metalifeへの登録は無料です。</dd>
-                    <dt><span class="wobble-text">Q4</span>: どのように参加できますか？</dt>
+                    <dt class="faq-ttl"><span class="wobble-text">Q3</span>: 特別なアプリのインストールは必要ですか？</dt>
+                    <dd><span class="wobble-text">A3</span>: いいえ、MetaLifeはブラウザ上で動作するため、アプリのインストールは不要です。URLひとつで簡単にアクセスでき、どこからでも参加可能です。</dd>
+                    <dt class="faq-ttl"><span class="wobble-text">Q4</span>: 会話はどうやって始めるのですか？</dt>
                     <dd><span class="wobble-text">A4</span>: アカウントを作成してください。</dd>
-                    <dt><span class="wobble-text">Q5</span>: サポートはどのように受けられますか？</dt>
+                    <dt class="faq-ttl"><span class="wobble-text">Q5</span>: サポートはどのように受けられますか？</dt>
                     <dd><span class="wobble-text">A5</span>: サポートはお問い合わせフォームからご連絡ください。</dd>
                 </dl>
             </div>
         </div><!-- /.faq -->
     </section>
-<img src="/img/Copilot_20250728_231418.png" alt="">
+
+<!-- contact -->
     <section class="contact">
         <h2 class="sec-title">お問い合わせ</h2>
         <p>ご質問やご意見がある場合は、以下のフォームからお問い合わせください。</p>
@@ -121,9 +162,13 @@
     </section>
     
     <footer>
+        <div class="footer-logo">
+            <img src="/metalife/photos/oreiloop.gif" alt="#">
+        </div>
         <div class="sns">
-            <a href="https://twitter.com/Metalife" target="_blank"><img src="/metalife/img/mail.png" alt=""></a>
-            <a href="https://www.instagram.com/Metalife" target="_blank"><img src="/metalife/img/Instagram.png" alt=""></a>
+            <a href="#" target="_blank"><img src="/metalife/photos/telll.png" alt=""></a>
+            <a href="#" target="_blank"><img src="/metalife/photos/mail.png" alt=""></a>
+            <a href="https://www.instagram.com/Metalife" target="_blank"><img src="/metalife/photos/Instagram.png" alt=""></a>
         </div><!-- /.sns -->
         <p>&copy; 2023 Metalife. All rights reserved.</p>
     </footer>
@@ -131,7 +176,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 <!-- 外部JSファイル -->
-<script src="../js/main.js"></script>
+<script src="/metalife/js/main.js"></script>
 </body>
 
 </html>
