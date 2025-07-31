@@ -124,6 +124,7 @@ nav a:hover {
 }
 
 
+
 /* about */
 .about {
   text-align: center;
@@ -274,7 +275,7 @@ nav a:hover {
 
 /* ivent-content */
 .content-detail {
-  background-color: rgb(123, 230, 123 ,0.9);
+  background-color: rgb(123, 230, 123);
   padding-block: 80px;
 }
 
@@ -344,19 +345,32 @@ nav a:hover {
   }
 }
 
+/* キャラクター */
+.follower {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.follower img {
+  width: 100%;
+  height: auto;
+}
+
+
 /* FAQ */
 .faq {
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #7BE67B;
   border-radius: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.faq h2 {
-}
 .faq-item {
   margin-bottom: 15px;
   padding: 10px;
@@ -367,7 +381,6 @@ nav a:hover {
 .faq-item h2 {
   text-align: center;
   font-size: 24px;
-  color: #007bff;
   cursor: pointer;
 }
 
@@ -431,36 +444,56 @@ font-size:24px;
   margin-top: 1em;
   transition: background-color 0.3s ease;
 }
+.faq-ttl {
+  position: relative;
+  cursor: pointer;
+  padding-right: 24px; /* ＋のための余白 */
+}
 
+/* ホバー効果 */
 .faq dt:hover {
-  background-color: #f0f0f0;
+  background-color: #e0e0e0;
 }
 
-
-/* 基本設定 */
-body {
-    /* background: #1a1a1a; ダーク背景 */
-    font-family: "Press Start 2P", sans-serif; /* ピクセル風フォント */
-    color: #ffffff;
-    margin: 0;
-    padding: 0;
+/* ＋マーク共通設定 */
+.faq-ttl::before,
+.faq-ttl::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px; /* 右端に配置 */
+  width: 12px;
+  height: 1px;
+  margin: auto;
+  background-color: #000;
 }
+
+/* 縦棒（before）を追加して＋に */
+.faq-ttl::before {
+  transform: rotate(90deg);
+}
+
+/* 開いたら「−」に：縦線を消す */
+.faq-ttl.is-active::before {
+  opacity: 0;
+}
+
 
 /* セクション全体のスタイル */
 .contact {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 20px;
     text-align: center;
-    border: 5px solid #00ff00; /* ネオン風の枠 */
-    background: #1f1f1f;
-    box-shadow: 0 0 15px #00ff00; /* 光るような効果 */
+    /* border: 5px solid #348486; ネオン風の枠 */
+    /* box-shadow: 0 0 15px #00ff00; 光るような効果 */
 }
 
 /* タイトルのスタイル */
 .sec-title {
     font-size: 24px;
-    color: #00ff00;
+    /* color: #0ea30e; */
     margin-bottom: 20px;
 }
 
@@ -469,7 +502,6 @@ label {
     display: block;
     margin-bottom: 10px;
     font-size: 14px;
-    color: #00ff00; /* ネオン色 */
 }
 
 /* 入力フィールド */
@@ -479,23 +511,20 @@ textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    border: 3px solid #00ff00;
-    background: #1a1a1a;
     color: #ffffff;
     font-size: 14px;
-    box-shadow: inset 0 0 10px #00ff00; /* 内側の光効果 */
+    border-radius: 10px;
 }
 
 /* ボタン */
 button {
     padding: 10px 20px;
     font-size: 16px;
-    color: #1a1a1a;
-    background: #00ff00;
     border: none;
     cursor: pointer;
     font-weight: bold;
     transition: transform 0.2s;
+    border-radius: 10px;
 }
 
 button:hover {
@@ -506,10 +535,29 @@ button:hover {
 
 
 /* footer */
-.footer {
+footer {
   text-align: center;
   padding: 20px;
-  background-color: #f1f1f1;
   border-top: 1px solid #ccc;
   margin-top: 20px;
 } 
+.footer-logo {
+  display: inline-block;
+  width: 100px; /* ロゴの幅 */
+  height: 100px; /* ロゴの高さ */
+  margin-bottom: 20px;
+}
+.sns{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.sns img{
+  width: 44px;
+  height: 44px;
+  transition: transform 0.2s;
+}
+.sns img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ff00; /* ホバー時の光効果 */
+}
