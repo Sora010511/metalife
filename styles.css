@@ -1,0 +1,716 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 80px;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-image: url(photos/hackthon_background-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  object-fit: cover;
+}
+
+section {
+  scroll-margin-top: 120px; /* ナビゲーションの高さに合わせて調整 */
+}
+
+/* header */
+#header {
+  display: flex;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+#header h1 {
+  width: 30%;
+  height: 100%;
+  margin-block: 0;
+  margin-left: 30px;
+}
+
+.logo {
+  width: 100px;
+}
+
+h1 img {
+  height: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+}
+
+nav li {
+  padding-inline: 2%;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+nav a {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #20588a;
+  display: inline-block;
+  padding: 10px 10px;
+  border-radius: 20px;
+}
+
+nav a:hover {
+  background-color: #fee140;
+}
+
+/* mainvisual */
+#mainvisual img {
+  height: 100vh;
+}
+
+#mainvisual .key-text .key-title {
+  font-size: 3.6vw; /*画面幅に応じて文字サイズが変化 */
+  font-weight: bold;
+  color: #20588a;
+  margin-bottom: 30px;
+  text-shadow: 0 4px 6px #a3ca5b;
+
+}
+
+.key-text {
+  position: absolute;
+  top: 240px;
+  left: 8%;
+  z-index: 2;
+}
+
+.key-btn a {
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 3.2vw; /* 画面幅に応じて文字サイズが変化 */
+  font-weight: bold;
+  padding: 8px 24px;
+  display: inline-block;
+  border-radius: 50px;
+  margin-block: 20px;
+  transition: all 0.1s;
+  background-color: #30cfd0;
+  box-shadow: 0 7px #fee140;
+  border: 1px solid #a3ca5b;
+  color: #fefefe;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  color: #fefefe;
+  background-color: #fee140;
+  box-shadow: 0 6px #30cfd0;
+  border: 1px solid #a3ca5b;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.btn:active {
+  position: relative;
+  top: 6px;
+  left: 3px;
+  box-shadow: none;
+}
+
+
+
+/* about */
+#about {
+  text-align: center;
+}
+
+#about h2,
+#voice h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.circle-container {
+  position: relative;
+  margin-top: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+.circle-container ul {
+  width: 100%;
+}
+
+.circle-container li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  /* 画像の幅と同じに設定 */
+  height: 250px;
+  /* 画像の高さと同じに設定 */
+  margin-left: -125px;
+  /* 自身の幅の半分を戻して中央揃え */
+  margin-top: -125px;
+  /* 自身の高さの半分を戻して中央揃え */
+  /* アニメーション時間: 停止3秒 + 回転0.5秒 = 3.5秒/ステップ
+     5枚の画像なので、合計時間 = 3.5秒 * 5 = 17.5秒 */
+  animation: liRotate 17.5s linear infinite;
+  /* li要素自体を回転させる */
+  z-index: -1;
+}
+
+/* 各li要素の初期位置（アニメーションの開始オフセット）を設定 */
+.circle-container li:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.circle-container li:nth-child(2) {
+  animation-delay: -3.5s;
+  /* 1ステップ分先行 */
+}
+
+.circle-container li:nth-child(3) {
+  animation-delay: -7s;
+  /* 2ステップ分先行 */
+}
+
+.circle-container li:nth-child(4) {
+  animation-delay: -10.5s;
+  /* 3ステップ分先行 */
+}
+
+.circle-container li:nth-child(5) {
+  animation-delay: -14s;
+  /* 4ステップ分先行 */
+}
+
+.circle-container li img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+
+}
+
+
+/* li要素（画像のコンテナ）を円周上で回転させるアニメーション */
+@keyframes liRotate {
+  /* 各ステップは 17.5秒 / 5 = 3.5秒 */
+  /* 回転角度は 360度 / 5枚 = 72度 ごと */
+  /* translateY(-120px) は、liの中心から上に120pxずらして円運動させるための距離 (円の半径) */
+
+  /* 最初の停止と初期位置（0度） */
+  0% {
+    transform: rotate(0deg) translateY(-300px);
+  }
+
+  /* 3秒停止 (0%から17.14%まで) */
+  17.14% {
+    /* (3秒 / 17.5秒) * 100% = 約17.14% */
+    transform: rotate(0deg) translateY(-300px);
+  }
+
+  /* 0.5秒で72度回転 (17.14%から20%まで) */
+  20% {
+    /* (3.5秒 / 17.5秒) * 100% = 20% */
+    transform: rotate(72deg) translateY(-300px);
+  }
+
+  /* 2番目の停止と位置（72度） */
+  37.14% {
+    /* (3秒 + 3.5秒) / 17.5秒 * 100% = 約37.14% */
+    transform: rotate(72deg) translateY(-300px);
+  }
+
+  /* 0.5秒で144度回転 */
+  40% {
+    /* (3.5秒 * 2) / 17.5秒 * 100% = 40% */
+    transform: rotate(144deg) translateY(-300px);
+  }
+
+  /* 3番目の停止と位置（144度） */
+  57.14% {
+    /* (3秒 + 3.5秒 * 2) / 17.5秒 * 100% = 約57.14% */
+    transform: rotate(144deg) translateY(-300px);
+  }
+
+  /* 0.5秒で216度回転 */
+  60% {
+    /* (3.5秒 * 3) / 17.5秒 * 100% = 60% */
+    transform: rotate(216deg) translateY(-300px);
+  }
+
+  /* 4番目の停止と位置（216度） */
+  77.14% {
+    /* (3秒 + 3.5秒 * 3) / 17.5秒 * 100% = 約77.14% */
+    transform: rotate(216deg) translateY(-300px);
+  }
+
+  /* 0.5秒で288度回転 */
+  80% {
+    /* (3.5秒 * 4) / 17.5秒 * 100% = 80% */
+    transform: rotate(288deg) translateY(-300px);
+  }
+
+  /* 5番目の停止と位置（288度） */
+  97.14% {
+    /* (3秒 + 3.5秒 * 4) / 17.5秒 * 100% = 約97.14% */
+    transform: rotate(288deg) translateY(-300px);
+  }
+
+  /* 0.5秒で360度回転（一周完了） */
+  100% {
+    transform: rotate(360deg) translateY(-300px);
+  }
+}
+
+
+/* ivent-content */
+.content-detail {
+  background-color: rgb(203, 242, 130, 0.8);
+  padding-block: 80px;
+}
+
+.content-detail:last-of-type {
+  padding-top: 40px;
+}
+
+.left-content {
+  width: 50%;
+  background-color: white;
+  padding: 5%;
+  margin-bottom: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  opacity: 0;
+}
+
+
+.right-content {
+  width: 50%;
+  background-color: white;
+  padding: 5%;
+  margin-left: auto;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  opacity: 0;
+  margin-bottom: 30px;
+}
+
+.left-content img,
+.right-content img {
+  height: 100%;
+  width: 100%;
+  margin-right: 30px;
+}
+
+.about-txt p:first-of-type {
+  color: red;
+  margin-block: 10px;
+  font-size: 1.25rem;
+}
+
+.about-txt p:nth-of-type(2) {
+  margin-bottom: 10px;
+}
+
+.animation-left {
+  animation: moveRight 1s 1 forwards linear;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animation-right {
+  animation: moveLeft 1s 1 forwards linear;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(+50%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* voice */
+#voice {
+  margin-bottom: 30px;
+}
+
+.voice-content {
+  animation: expandIn 3s 1 forwards ease-out;
+  opacity: 1;
+}
+
+@keyframes expandIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.left-voice {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.right-voice {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.icon {
+  text-align: center;
+  width: 10%;
+}
+
+.icon img {
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.voice-txt {
+  position: relative;
+  background-color: rgb(218, 234, 240);
+  width: 60%;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 30px;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  }
+
+.voice-txt:first-of-type::before,
+.voice-txt:last-of-type::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  right: 100%;
+  border: 15px solid transparent;
+  border-right: 15px solid rgb(218, 234, 240);
+}
+
+.voice-txt:nth-of-type(1)::before {
+  position: absolute;
+  content: "";
+  top: 10%;
+  left: 100%;
+  border: 15px solid transparent;
+  border-left: 15px solid rgb(218, 234, 240);
+}
+
+
+/* キャラクター */
+.follower {
+  position: fixed;
+  width: 64px;
+  height: 64px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.follower img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* FAQ */
+#faq {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 80px;
+  padding: 20px;
+  background-color: #7BE67B;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h2 {
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.faq-item.active h2 {
+  color: #0056b3;
+}
+
+.faq-item h2:hover {
+  color: #0056b3;
+}
+
+.faq-item dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.faq-item.active h2::after {
+  content: " ▲";
+}
+
+.wobble-text {
+  display: inline-block;
+  font-size: 24px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.wobble-text:hover {
+  animation: wobble 0.6s infinite;
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    transform: rotate(-3deg);
+  }
+
+  75% {
+    transform: rotate(2deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* アコーディオン */
+#faq dd {
+  display: none;
+  margin: 0 0 1em;
+  padding-left: 1em;
+  border-left: 2px solid #999;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#faq dt {
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.faq-ttl {
+  position: relative;
+  cursor: pointer;
+  padding-right: 24px;
+  /* ＋のための余白 */
+}
+
+/* ホバー効果 */
+#faq dt:hover {
+  background-color: #e0e0e0;
+}
+
+/* ＋マーク共通設定 */
+.faq-ttl::before,
+.faq-ttl::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  /* 右端に配置 */
+  width: 12px;
+  height: 1px;
+  margin: auto;
+  background-color: #000;
+}
+
+/* 縦棒（before）を追加して＋に */
+.faq-ttl::before {
+  transform: rotate(90deg);
+}
+
+/* 開いたら「−」に：縦線を消す */
+.faq-ttl.is-active::before {
+  opacity: 0;
+}
+
+
+/* セクション全体のスタイル */
+#contact {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffff;           /* 白背景 */
+  border: 16px solid #7BE67B;          /* 緑色枠線（ネオン風） */
+  border-radius: 20px;                 /* 白枠の角丸 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  position: relative;                  /* キャラ配置に備えて relative 指定 */
+}
+#contact p {
+  margin-bottom: 20px;
+}
+
+
+/* タイトルのスタイル */
+.sec-title {
+  font-size: 24px;
+  /* color: #0ea30e; */
+  margin-bottom: 20px;
+}
+
+/* フォーム内のラベル */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+/* 入力フィールド */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+/* ボタン */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.2s;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ff00;
+  /* ホバー時の光効果 */
+}
+
+
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.footer-logo {
+  display: inline-block;
+  width: 100px;
+  /* ロゴの幅 */
+  height: 100px;
+  /* ロゴの高さ */
+  margin-bottom: 20px;
+}
+
+footer p {
+  padding-block: 5px;
+}
+
+.sns {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sns img {
+  width: 44px;
+  height: 44px;
+  transition: transform 0.2s;
+}
+
+.sns img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #00ff00;
+}
+
+
+
+
